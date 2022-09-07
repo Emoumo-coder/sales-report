@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ecf0f3;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    max-width: 1200px;
+    padding: 3rem;
+    background-color: #ecf0f3;
+    box-shadow: .3rem .3rem 20rem #cbced1,
+                -.3rem -.3rem 20rem #fff;
+}
+.product-container, .product-details, .product-sales{
+    border: .07rem solid #222;
+    padding: 2rem;
+    border-radius: .2rem;
+}
+.product-container .product-title{
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+.message {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 7px;
+  word-wrap: break-word;
+  color: #fff;
+  background: #f0aeae;
+  border: 2px solid #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.product-container .form, .format-date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.product-container .form .div-col{
+    margin: 1rem;
+}
+:is(.product-container .form .div-col) select, input{
+    background: #fff;
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    box-shadow: .3rem .3rem 3rem #222;
+    max-width: 14rem;
+    width: 14rem;
+    text-align: center;
+}
+
+.quantity {
+    display: inline-block;
+  }
+  .quantity .input-group {
+    max-width: 14rem;
+    display: inline-block;
+    outline: none !important;
+    border: none !important;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.1);
+    position: relative;
+    z-index: 1;
+  }
+  .quantity .button {
+    display: grid;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    top: 0;
+  }
+  .quantity .button.minus {
+    left: 0;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .quantity .button.minus {
+    font-size: 12px !important;
+  }
+  .quantity .button.plus {
+    right: 0;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .quantity .button.plus{
+    font-size: 12px !important;
+  }
+  .quantity .button .btn {
+    padding: 0;
+    width: 35px;
+    height: 100%;
+    line-height: 5px;
+    border-radius: 0px;
+    background: transparent;
+    color: #282828;
+    font-size: 12px;
+    border: none;
+  }
+  .quantity .input-number {
+    border: 1px solid #eceded;
+    width: 100%;
+    text-align: center;
+    height: 45px;
+    border-radius: 0px;
+    overflow: hidden;
+    padding: 0px 38px;
+    user-select: none !important;
+    /* position: relative; */
+  }
+
+.submit{
+    margin: 0.5rem;
+    padding: 1rem;
+    outline: none;
+    background: #fff;
+    border-color:  #fff;
+    text-align: center;
+    font-size: 1.04rem;
+}
+.product-details, .product-sales{
+    margin-top: 1rem;
+    overflow: auto;
+}
+:is(.product-details, .product-sales) table,th, td{
+    border: 1px solid #444;
+    padding: 5px;
+    border-collapse: collapse;
+}
+:is(.product-details, .product-sales) table{
+    background-color: #fff;
+    width: 100%;
+}
+:is(.product-details, .product-sales) table caption{
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
