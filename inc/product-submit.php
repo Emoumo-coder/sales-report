@@ -89,7 +89,7 @@ if(isset($_POST['productName']) && isset($_POST['productQty']) && isset($_POST['
                                 $arr['startDate'] = $startDate;
                                 $arr['stopDate'] = $stopDate;
                                 // $sql_sales3 = ;
-                                $sql_sales_result3 = $db->read("SELECT month(sale_date) as fmonth, year(sale_date) as fyear,
+                                $sql_sales_result3 = $db->read("SELECT day(sale_date) as fday, month(sale_date) as fmonth, year(sale_date) as fyear,
                                 t1.sale_qty, t2.p_price
                                 FROM tbl_sales t1
                                 JOIN tbl_product t2
@@ -100,11 +100,11 @@ if(isset($_POST['productName']) && isset($_POST['productQty']) && isset($_POST['
                                 $final_total = 0;
                                 $$table_bought_details_sales = '';
                                 foreach ($sql_sales_result3 as $row3) {
-                                    $i++;
+                                    $ii++;
                                     $total = $row3->p_price * $row3->sale_qty;
                                     $table_bought_details_sales .= "<tr>
-                                        <td>$i</td>
-                                        <td>$row3->fmonth / $row3->fyear</td>
+                                        <td>$ii</td>
+                                        <td>$row3->fday / $row3->fmonth / $row3->fyear</td>
                                         <td>$total</td>
                                     </tr>";
                                     $final_total +=$total;
